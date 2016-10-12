@@ -1,0 +1,12 @@
+version: "2"
+
+services:
+  devdocs:
+    build:
+      context: .
+      args:
+        - http_proxy
+        - https_proxy
+        - docs
+    ports:
+      - "127.0.0.1:9292:9292"
